@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <link href="./css/style.css">
+
+        <script src="./js/style.js"></script>
+        <script>
+            //Before the closing of head tag             
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="word" placeholder="Enter the word">
+            <input type="submit" value="save" onclick="saveWord(event)">
+        </form>
+        <p id="mynews"></p>
+
+        <script>
+            //Before the closing of body tag
+            //Global Variable
+            let mynews = document.getElementById("mynews");
+
+            mynews.innerHTML = "";
+            //1. Function defination
+            function saveWord(e){ //e = event  formal argument
+                //1. Object.Property
+                //2. Object.Merhod();
+                e.preventDefault();
+                
+                //Local Variable
+                let w = document.querySelector('input[name="word"]');
+
+                //Object.method(); method=function
+                console.log(w.value);
+                mynews.innerHTML += '<p>'+w.value+'</p>'
+            }
+            
+        </script>
+        
+    </body>
+</html>

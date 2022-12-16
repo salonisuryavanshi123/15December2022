@@ -22,6 +22,7 @@
         <script>
             //Before the closing of body tag
             //Global Variable
+            let w = document.querySelector('input[name="word"]');
             let mynews = document.getElementById("mynews");
 
             mynews.innerHTML = "";
@@ -32,11 +33,11 @@
                 e.preventDefault();
                 
                 //Local Variable
-                let w = document.querySelector('input[name="word"]');
-
+               
+                
                 //Object.method(); method=function
                 console.log(w.value);
-                mynews.innerHTML += '<p>'+w.value+'</p>'
+                mynews.innerHTML += " " + w.value;
             }
             
         </script>
